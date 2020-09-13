@@ -21,3 +21,22 @@
   *
   
   
+##  なんでもメモ
+[こちらを参考にしました](https://www.sejuku.net/blog/68146)
+[ディレクトリ構造・特定のファイルにのみ読み込ませる方法など](https://noknow.info/it/ruby/rails/how_to_use_webpacker?lang=ja#sec1)
+* app/jacvascript配下に他のjsを管理するためのjavascriptsディレクトリを作成
+  * その中に適用したいjsを定義する
+  * さらに読み込むためのjsファイルを定義する
+* app/javascript/stylesheets配下に読み込ませたいcssファイルを定義する
+* app/javascript/packs/application.js内部で先ほどのcssファイルをimportする
+* cssの呼び出しタグも忘れず定義する　<%= stylesheet_pack_tag 'application'%>
+
+
+
+##  気づきメモ
+* 全てのページに適用する場合は『packs/application.js』ないにて『import '../js/application'』とする様だ
+* 逆にピンポイントなページに読み込ませたい場合には
+
+
+##  疑問点メモ
+* 個別のビューに個別のスタイルがあてたい場合、個別のscriptがあてたい場合どうすれば良いか
